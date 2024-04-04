@@ -1,0 +1,14 @@
+{% load static %}
+<link rel = "stylesheet" href = "{% static 'kiosk/style.css'%}">
+
+<h1>Menu List</h1>
+
+<body>
+    <nav id = "topMenu">
+        <ul>
+            {% for menulist in object_list %}
+                <li><a class = "menulink" href = "{% url 'kiosk:detail' menulist.id %}">{{menulist}}</a></li>
+            {% endfor %}   
+        </ul>
+    </nav>
+</body>

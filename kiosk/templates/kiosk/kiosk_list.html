@@ -1,0 +1,11 @@
+<h1>Menu List</h1>
+
+<body>
+    <nav id = "category">
+        <ul>
+            {% for menulist in object_list %}
+                <li>{{menulist}}</li>
+            {% endfor %}   
+        </ul>
+    </nav>
+</body>
